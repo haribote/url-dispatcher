@@ -1,7 +1,8 @@
 /**!
  * url-dispatcher
- * Author: KIMURA Tetsuro,
+ * Author : KIMURA Tetsuro,
  * License: MIT
+ * Thanks : Backbone.js
  */
 
 // import modules
@@ -9,7 +10,10 @@ import url         from 'url'
 import isRegExp    from 'lodash.isregexp'
 import isFunction  from 'lodash.isfunction'
 
-// constants
+/**
+ * Constants of Regular expression patterns
+ * @type {RegExp}
+ */
 const ESCAPE_REG_EXP = /[\-{}\[\]+?.,\\\^$|#\s]/g;
 const OPTIONAL_PARAM = /\((.*?)\)/g;
 const NAMED_PARAM    = /(\(\?)?:\w+/g;
@@ -18,6 +22,8 @@ const SPLAT_PARAM    = /\*\w+/g;
 /**
  * URL Dispatcher
  * @class
+ * @param {Object} routes
+ * @param {Function} routes.*
  */
 class Dispatcher {
   /**
@@ -32,15 +38,21 @@ class Dispatcher {
     Dispatcher._bindRoutes.call(this);
   }
 
+  /**
+   * Add routing handler to collection
+   * @param route
+   * @param callback
+   */
   route (route, callback) {
     if (!isRegExp(route)) {
       route = Dispatcher._routeToRegExp(route);
     }
 
-    this.handlers.unshift({ route, callback});
+    this.handlers.unshift({ route, callback });
   }
 
   /**
+   * Matching and execute callback
    * @param {String} urlString
    */
   run (urlString) {
@@ -62,6 +74,10 @@ class Dispatcher {
     }
   }
 
+  /**
+   * Bind all routing map
+   * @private
+   */
   static _bindRoutes () {
     if (this.routes === undefined) {
       return;
@@ -75,6 +91,12 @@ class Dispatcher {
       });
   }
 
+  /**
+   * Return matching pattern
+   * @param route
+   * @returns {RegExp}
+   * @private
+   */
   static _routeToRegExp (route) {
     route = route
       .replace(ESCAPE_REG_EXP, '\\$&')
