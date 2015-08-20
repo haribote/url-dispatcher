@@ -1,5 +1,5 @@
 {
-  "name": "url-dispacher",
+  "name": "url-dispatcher",
   "version": "0.1.0",
   "description": "A URL dispatcher like Backbone.Router.",
   "main": "lib/dispatcher.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haribote/url-dispacher.git"
+    "url": "git+https://github.com/haribote/url-dispatcher.git"
   },
   "keywords": [
     "url",
@@ -24,9 +24,9 @@
   "author": "KIMURA Tetsuro <haribote.nobody@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haribote/url-dispacher/issues"
+    "url": "https://github.com/haribote/url-dispatcher/issues"
   },
-  "homepage": "https://github.com/haribote/url-dispacher#readme",
+  "homepage": "https://github.com/haribote/url-dispatcher#readme",
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-plugin-espower": "^1.0.0",

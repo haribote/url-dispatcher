@@ -1,4 +1,4 @@
-# url-dispacher
+# url-dispatcher
 A URL dispatcher.
 It was inspired by Backbone.Router.
 
