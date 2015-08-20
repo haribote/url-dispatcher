@@ -1,6 +1,6 @@
 {
   "name": "url-dispatcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A URL dispatcher like Backbone.Router.",
   "main": "lib/dispatcher.js",
   "files": [
