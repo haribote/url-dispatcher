@@ -47,3 +47,6 @@ dispatcher.run(location.href);
  *      => '/hoge/1/2'
  */
 ```
+
+## Thanks
+[Backbone.js](https://github.com/jashkenas/backbone)
