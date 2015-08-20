@@ -13,7 +13,7 @@ npm install url-dispatcher --save
 var Dispatcher = require('url-dispatcher');
 
 // create instance with the routing map like Backbone.Router
-var dispatcher = Dispatcher({
+var dispatcher = new Dispatcher({
   routes: {
     '/'                        : function () {
       return 'root';
