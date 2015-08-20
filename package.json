@@ -1,12 +1,16 @@
 {
   "name": "url-dispacher",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A URL dispatcher like Backbone.Router.",
-  "main": "index.js",
+  "main": "lib/dispatcher.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "start": "npm run watch",
     "test": "karma start --single-run",
-    "watch": "karma start"
+    "watch": "karma start",
+    "build": "babel ./src/dispatcher.js --out-file ./lib/dispatcher.js"
   },
   "repository": {
     "type": "git",
