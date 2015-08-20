@@ -1,6 +1,6 @@
 {
   "name": "url-dispatcher",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "A URL dispatcher like Backbone.Router.",
   "main": "lib/dispatcher.js",
   "files": [
@@ -21,7 +21,7 @@
     "dispatch",
     "dispatcher"
   ],
-  "author": "KIMURA Tetsuro <haribote.nobody@gmail.com>",
+  "author": "KIMURA Tetsuro",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/haribote/url-dispatcher/issues"
