@@ -43,7 +43,8 @@ var dispatcher = Dispatcher({
 
 // Call run method with URL String 
 dispatcher.run(location.href);
-/* ex.) location.href = 'http://www.foobar.com/hoge/1/2'
+/* 
+ * ex.) location.href = 'http://www.foobar.com/hoge/1/2'
  *      => '/hoge/1/2'
  */
 ```
