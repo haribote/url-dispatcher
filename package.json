@@ -32,9 +32,14 @@
     "karma-browserify": "^4.3.0",
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
+    "lodash.isfunction": "^3.0.6",
     "mocha": "^2.2.5",
     "power-assert": "^0.11.0",
+    "uglify": "^0.1.5",
     "watchify": "^3.3.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash.isfunction": "^3.0.6",
+    "lodash.isregexp": "^3.0.3"
+  }
 }
