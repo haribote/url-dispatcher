@@ -1,5 +1,6 @@
 # url-dispacher
-A URL dispatcher like Backbone.Router.
+A URL dispatcher.
+It was inspired by Backbone.Router.
 
 ## Get started
 ```bash
@@ -8,8 +9,10 @@ npm install url-dispatcher --save
 
 ## Usage
 ```javascript
+// import the module
 var Dispatcher = require('url-dispatcher');
 
+// create instance with the routing map like Backbone.Router
 var dispatcher = Dispatcher({
   routes: {
     '/'                        : function () {
@@ -38,7 +41,9 @@ var dispatcher = Dispatcher({
   }
 });
 
+// Call run method with URL String 
 dispatcher.run(location.href);
-// ex.) location.href = 'http://www.foobar.com/hoge/1/2'
-//      => '/hoge/1/2'
+/* ex.) location.href = 'http://www.foobar.com/hoge/1/2'
+ *      => '/hoge/1/2'
+ */
 ```
