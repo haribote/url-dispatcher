@@ -2,13 +2,39 @@
 A URL dispatcher.
 It was inspired by Backbone.Router.
 
-## Get started
+## Installation
+
+### npm
 ```bash
 npm install url-dispatcher --save
 ```
 ```javascript
 // import the module
 var Dispatcher = require('url-dispatcher');
+```
+
+### Bower
+```bash
+bower install url-dispatcher --save
+```
+```html
+<script src="/path/to/script/dispatcher.min.js"></script>
+<!-- Or, if you want use on IE8 -->
+<script src="/path/to/script/dispatcher.compat.min.js"></script>
+```
+
+### Manually
+```bash
+git clone git@github.com:haribote/url-dispatcher.git
+```
+Or, [Download ZIP](https://github.com/haribote/url-dispatcher/archive/master.zip)
+And then, copy `dest/dispatcher.min.js` to your project.
+```html
+<script src="/path/to/script/dispatcher.min.js"></script>
+<!-- Or, if you want use on IE8 -->
+<script src="/path/to/script/dispatcher.compat.min.js"></script>
+```
+
 
 ## Usage
 ```javascript

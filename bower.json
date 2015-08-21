@@ -1,0 +1,29 @@
+{
+  "name": "url-dispatcher",
+  "version": "0.1.5",
+  "homepage": "https://github.com/haribote/url-dispacher",
+  "authors": [
+    "KIMURA Tetsuro <haribote.nobody@gmail.com>"
+  ],
+  "description": "A URL dispatcher like Backbone.Router.",
+  "main": [
+    "dest/dispatcher.min.js",
+    "dest/dispatcher.compat.min.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "url",
+    "dispatch",
+    "dispatcher"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
