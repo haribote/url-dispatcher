@@ -1,7 +1,11 @@
 {
   "name": "url-dispatcher",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A URL dispatcher like Backbone.Router.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haribote/url-dispatcher.git"
+  },
   "main": "lib/dispatcher.js",
   "files": [
     "lib"
@@ -11,10 +15,6 @@
     "test": "karma start --single-run",
     "watch": "karma start",
     "build": "babel ./src/dispatcher.js --out-file ./lib/dispatcher.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/haribote/url-dispatcher.git"
   },
   "keywords": [
     "url",
