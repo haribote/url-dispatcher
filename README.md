@@ -6,37 +6,49 @@ It was inspired by Backbone.Router.
 ```bash
 npm install url-dispatcher --save
 ```
-
-## Usage
 ```javascript
 // import the module
 var Dispatcher = require('url-dispatcher');
 
+## Usage
+```javascript
 // create instance with the routing map like Backbone.Router
 var dispatcher = new Dispatcher({
   routes: {
-    '/'                        : function () {
+    '/': function () {
       return 'root';
     },
 
-    '/hoge'                    : function () {
+    '/hoge': function () {
       return '/hoge';
     },
 
-    '/hoge/:piyo'              : function (piyo) {
-      return '/hoge/' + piyo + '';
+    '/hoge/:piyo': function (piyo) {
+      return {
+        piyo: piyo
+      };
     },
 
-    '/hoge/:piyo/:fuga'        : function (piyo, fuga) {
-      return '/hoge/' + piyo + '/' + fuga;
+    '/hoge/:piyo/:fuga': function (piyo, fuga) {
+      return {
+        piyo: piyo,
+        fuga: fuga
+      };
     },
 
     '/hoge?piyo=:fuga&foo=:bar': (search, fuga, bar)  => {
-      return '/hoge?piyo=' + fuga + '&foo=' + bar;
+      return {
+        search: search,
+        fuga  : fuga,
+        bar   : bar
+      };
     },
 
-    '/foobar/*splat'           : function (path, search) {
-      return '/' + path + '?' + search;
+    '/foobar/*splat': function (path, search) {
+      return {
+        path  : path,
+        search: search
+      };
     }
   }
 });
@@ -45,7 +57,10 @@ var dispatcher = new Dispatcher({
 dispatcher.run(location.href);
 /* 
  * ex.) location.href = 'http://www.foobar.com/hoge/1/2'
- *      => '/hoge/1/2'
+ *      =>  {
+ *            piyo: 1,
+ *            fuga: 2
+ *          }
  */
 ```
 
