@@ -14,7 +14,9 @@
     "start": "npm run watch",
     "test": "karma start --single-run",
     "watch": "karma start",
-    "build": "babel ./src/dispatcher.js --out-file ./lib/dispatcher.js"
+    "build:node": "babel ./src/dispatcher.js --out-file ./lib/dispatcher.js",
+    "build:browser": "browserify ./src/main.js -t babelify | uglifyjs > ./dest/dispatcher.min.js",
+    "build": "npm run build:node && npm run build:browser"
   },
   "keywords": [
     "url",
@@ -39,10 +41,11 @@
     "lodash.isfunction": "^3.0.6",
     "mocha": "^2.2.5",
     "power-assert": "^0.11.0",
-    "uglify": "^0.1.5",
+    "uglify-js": "^2.4.24",
     "watchify": "^3.3.1"
   },
   "dependencies": {
+    "es5-shim": "^4.1.10",
     "lodash.isfunction": "^3.0.6",
     "lodash.isregexp": "^3.0.3"
   }
